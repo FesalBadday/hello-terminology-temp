@@ -1,0 +1,53 @@
+body {
+  background-color: ghostwhite;
+  margin: 0 auto;
+}
+
+h2:hover {
+  color: darkred;
+}
+
+h2 {
+  font-family: 'Underdog', cursive;
+}
+
+a {
+  font-family: 'Underdog', cursive;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+li {
+  text-align: center;
+  list-style: inside;
+}
+
+a:hover {
+  color: darkred;
+  font-weight: bold;
+}
+
+header {
+  font-size: 80px;
+  font-family: 'Kirang Haerang', cursive;
+  color:  #2E4053;    
+  text-align: center;
+}
+
+section {
+  font-size: 80px;
+  text-align: center;
+  color:  #2E4053;
+}
+
+img {
+  width: 20%;
+  margin: 0 auto;
+}
+
+.heading-box {
+  background-color: grey;
+  margin: 0 auto;
+  padding: 20px;  
+  text-align: center;
+}
