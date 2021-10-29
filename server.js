@@ -38,7 +38,7 @@ app.get('/api/terminology/:id', function(request, response) {
 
 // Handle 404 errors with middleware
 app.use(function(request, response) {
-  response.st atus(404)
+  response.status(404)
   response.send('404: File Not Found')
 });
 
