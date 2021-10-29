@@ -25,26 +25,26 @@ const definitions = [
 ];
 
 // Dynamic JSON Endpoint
-app.get('/api/terminology', function(request, response) {
-  response.send(definitions)
+app.get('/api/terminology', (req, res) => {
+  res.send(definitions)
 })
 
-app.get('/api/terminology/:id', function(request, response) {
-  const definition = definitions.find(function (item) {
-    return request.params.id === item.slug
+app.get('/api/terminology/:id', (req, res) => {
+  const definition = definitions.find((item) => {
+    return req.params.id === item.slug
   })
-  response.send(definition)
+  res.send(definition)
 })
 
 // Handle 404 errors with middleware
-app.use(function(request, response) {
-  response.status(404)
-  response.send('404: File Not Found')
+app.use((req, res) => {
+  res.status(404)
+  res.redirect('404.html')
 });
 
 // Start server
 const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, function(){
+app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`);
 });
